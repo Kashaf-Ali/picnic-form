@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picnic form</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <style>
+        body{
+            background-color: lightgray ; font-size: larger; font-family: initial:monospace;
+        }
+    </style>
+</head>
+
+
+<body>
+<header>
+    <h1>My Goal For The Year</h1>
+
+    <nav aria-label="Primary-navigation">
+        <ul>
+            <li>
+                <a href="#Html">Html Learning</a>
+            </li>
+            <li>
+                <a href="#Vication">Planning a Vication</a>
+            </li>
+            <li>
+                <a href="#Contact">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+
+    <body>
+        <hr>
+
+        <article id="Contact">
+            <h2>Contact Me</h2>
+            <p>I'd really like to hear form you!</p>
+
+            <form action="https://httpbin.org/get" method="get">
+                <fieldset>
+                    <legend>Personal info</legend>
+                <p>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Kashaf"
+                autocomplete="on" required 
+                        autofocus>
+                    </p>
+                    <p>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Ali"
+                autocomplete="on" required>
+            </p>
+            <p>
+                <label for="paswd">Pasward:</label>
+                <input type="text" name="pasward" id="pasward" placeholder="Your secret" required>
+            </p>
+            <p>
+                <label for="Phone">Phone:</label>
+                <input type="tel" name="Phone" id="Phone" placeholder="5555555555"
+                pattern="[0-9]{3}-[0-9]-{3}-[0-9]{4}" required>
+            </p>
+            <p>
+                <label for="Decade">Favorite Decade:</label>
+                <input type="number" name="Decade" id="Decade" min="1950" max="2023" 
+                step="10" value="1980">
+            </p>
+            <!-- <p>
+                <label for="coffee">Favorite Coffee:</label>
+                <select name="coffee" id="coffee" multiple size="5">
+                    <optgroup label="Coffees">
+                    <option value="regular coffee">Regular Coffee</option>
+                    <option value="iced coffee">Iced-Coffee</option>
+                </optgroup>
+                <optgroup label="Expresso Drinks">
+                    <option value="latte">Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="cortado">Cortado</option>
+                    <option value="americano" selected>Americano</option>
+                </optgroup>
+                    <option value="other">Other</option>
+                </select>
+            </p> -->
+            
+            <p>
+                <label for="coffee">Favorite Coffee:</label>
+                <select name="coffee" id="coffee">
+                    <optgroup label="Coffees">
+                    <option value="regular coffee">Regular Coffee</option>
+                    <option value="iced coffee">Iced-Coffee</option>
+                </optgroup>
+                <optgroup label="Expresso Drinks">
+                    <option value="latte">Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="cortado">Cortado</option>
+                    <option value="americano" selected>Americano</option>
+                </optgroup>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>What is your favorite food?</legend>
+            <p>
+                <input type="radio" name="food" id="tacos" value="tacos">
+                <label for="tacos">Tacos</label>
+            </p>
+            <p>
+                <input type="radio" name="food" id="pizza" value="pizza">
+                <label for="pizza">Pizza</label>
+            </p>
+            <p>
+                <input type="radio" name="food" id="burgur" value="burgur">
+                <label for="bugur">Burgur</label>
+            </p>
+            <p>
+                <input type="radio" name="food" id="other" value="other">
+                <label for="other">Other</label>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Do you have a pet?</legend>
+            <p>
+                <input type="checkbox" name="pets" id="Dog" value="Dog">
+                <label for="dog">Dog</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="cat" value="cat">
+                <label for="cat">Cat</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="Fish" value="fish">
+                <label for="fish">Fish</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="other" value="other">
+                <label for="other">Other</label>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Send me a note!</legend>
+            <label for="message">Your Message</label>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10"
+            placeholder="Type your message here">
+             </textarea>
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+        <button type="reset">Reset</button>
+        
+            </form>
+        </article>
+    </body>
+</header>
+
+</body>
+</html>
